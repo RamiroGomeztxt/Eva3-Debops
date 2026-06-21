@@ -19,7 +19,7 @@ services:
 
   # 2. BACKEND: VENTAS 
   back-ventas:
-    build: "./proyecto semestral/back-Ventas_SpringBoot"
+    build: "./Proyecto/back-Ventas_SpringBoot"
     container_name: api_ventas
     ports:
       - "8080:8080"
