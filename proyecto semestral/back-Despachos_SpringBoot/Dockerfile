@@ -1,4 +1,4 @@
---- ETAPA 1: Compilación (Build con Maven estándar) ---
+#--- ETAPA 1: Compilación (Build con Maven estándar) ---
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN mvn dependency:go-offline -B
 COPY Springboot-API-REST-DESPACHO/src ./src
 RUN mvn clean package -DskipTests
 
---- ETAPA 2: Ejecución ---
+#--- ETAPA 2: Ejecución ---
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
