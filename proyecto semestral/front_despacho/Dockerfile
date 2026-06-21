@@ -1,4 +1,4 @@
---- ETAPA 1: Construcción (Build) ---
+#--- ETAPA 1: Construcción (Build) ---
 FROM node:20-alpine AS builder
 WORKDIR /app
 
@@ -10,7 +10,7 @@ Copiamos el resto del código y compilamos la app
 COPY . .
 RUN npm run build
 
---- ETAPA 2: Producción (Imagen ultraliviana con Nginx) ---
+#--- ETAPA 2: Producción (Imagen ultraliviana con Nginx) ---
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
