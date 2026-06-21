@@ -15,7 +15,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 #Limpiamos el contenido por defecto de nginx
-RUN rm -rf ./
+RUN rm -rf *
 
 #Copiamos los archivos estáticos compilados desde la etapa anterior
 COPY --from=builder /app/dist .
