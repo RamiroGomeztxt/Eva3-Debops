@@ -34,7 +34,7 @@ services:
 
   # 3. BACKEND: DESPACHOS 
   back-despachos:
-    build: "./proyecto semestral/back-Despachos_SpringBoot"
+    build: "./Proyecto/back-Despachos_SpringBoot"
     container_name: api_despachos
     ports:
       - "8081:8081"
@@ -64,4 +64,9 @@ volumes:
 
 networks:
   red_devops:
-    driver: bridge
+    driver: bridgeç¨
+
+
+
+
+
