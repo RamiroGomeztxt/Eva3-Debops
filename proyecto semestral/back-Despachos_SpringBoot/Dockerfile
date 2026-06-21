@@ -2,7 +2,7 @@
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
-Entramos y copiamos desde la subcarpeta correcta de Despachos
+# Entramos y copiamos desde la subcarpeta correcta de Despachos
 COPY Springboot-API-REST-DESPACHO/pom.xml .
 RUN mvn dependency:go-offline -B
 
@@ -13,7 +13,7 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
-Requisito Pauta: Usuario no-root
+#Requisito Pauta: Usuario no-root
 RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 
